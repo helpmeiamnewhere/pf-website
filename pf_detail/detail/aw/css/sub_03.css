@@ -1,0 +1,541 @@
+
+
+/*섹션*/
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section > div.container {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+/*페이지 경로*/
+/* 본문 시작*/
+/* 본문 인트로 시작 */
+
+/*유튜브채널*/
+
+/*제품소개*/
+
+
+/* SNS */
+
+
+/*푸터*/
+
+footer{
+    width: 100%;
+    height:490px;
+    position: relative;
+     box-sizing: border-box;
+     overflow: hidden;
+    
+}
+.ft_inner{
+    width: 1300px;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+
+div.ft_inner div.ascenter{
+    color: #fff;
+    width: 370px;
+    padding-left: 30px;
+   line-height: 1.3;
+    position: relative;
+    top: -60px;
+    left: 40px;
+}
+
+div.ft_inner div.ascenter p:nth-child(1){
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1;
+     color: #fff;
+}
+
+
+
+div.ft_inner div.ascenter p:nth-of-type(2){
+    font-size: 28px;
+     letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+     color: #fff;
+}
+
+div.ft_inner div.ascenter p:nth-child(3){
+    font-size: 15px;
+    font-weight: 300;
+      letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 30px;
+     color: #fff;    
+    line-height: 1.4;
+}
+div.footer_down{
+    width: 1300px;
+    height: 100px;
+    box-sizing: border-box;
+   
+   
+}
+
+div.footer_down div.group{
+    width: 500px;
+    float: left;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+   
+    
+}
+div.footer_down div.group ul{
+    overflow: hidden;
+    margin-left: 55px;
+    margin-left: 75px;
+}
+
+div.footer_down div.group ul li{
+    float: left;
+    
+}
+
+div.footer_down div.group p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 13px;
+     color: #fff;
+}
+
+div.footer_down div.group ul li a{
+     color: #fff;
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 2px 5px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+div.footer_down div.group ul li a:hover{
+    text-decoration: underline;
+}
+
+div.footer_down>a img{
+    width: 200px;
+     float: left;
+   position: absolute;
+   top: 80px;
+   left: 70px;
+}
+
+div.group2{
+    width: 300px;
+    height: 100px;
+    float: left;
+    position: relative;
+    position: absolute;
+    right: 20px;
+    z-index: 2000;
+}
+
+div.group2 div.family{
+    z-index: 2000;
+    position: absolute;
+    top: -40px;
+    left: 85px;
+}
+
+
+div.group2 div.family span.marker{
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgb(255, 96, 96) 50%);
+    transition: 0.5s;
+    background-size: 200%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.group2 div.family span.marker:hover{
+    background-position: -100% 0;
+    color: #fff;
+}
+
+div.group2 div.family span.gl{
+    background-position: -100% 0;
+    color: #fff;
+}
+
+div.group2 div.family ul{
+    width: 150px;
+    height: 160px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -160px;
+    border-radius: 10px;
+    box-shadow: 0px -2px 3px 0 rgba(0,0,0,0.3);
+    display: none;
+    z-index: 2000;
+}
+div.group2 div.family ul li a{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.2s;
+    z-index: 2000;
+}
+div.group2 div.family ul li:hover a{
+    background-color: rgba(255,96,96,1);
+    color: #fff;
+}
+div.group2 div.family ul li:first-child a{
+    border-radius: 10px 10px 0 0;
+}
+
+div.group2 div.family ul li:last-child a{
+    border-radius: 0 0 10px 10px;
+}
+
+div.group2>ul{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 65px;
+    margin-top: 30px;
+     width: 160px;
+    position: absolute;
+    left: 20px;
+    top: -20px;
+}
+
+div.group2>ul li{
+    float: left;
+}
+
+div.group2>ul li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+    margin: 0 5px;
+}
+
+div.group2>ul li a i{
+    font-size: 20px;
+    color: rgba(0,0,0,0.3);
+}
+
+div.group2>ul li a:hover i{
+    color: rgba(255,51,51,1);
+}
+
+div.links{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    z-index: 2000;
+}
+
+div.links div.bigger{
+    width: 100%;
+    position: absolute;
+    top:-100px;
+    right: 20px;
+    position: relative;
+}
+
+div.links div.bigger a{
+    display: inline-block;
+    position: absolute;
+   width: 150px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+div.links div.bigger a:first-child{
+    top: -15px;
+    right: 0px;
+}
+div.links div.bigger a:last-child{
+    top: 15px;
+     right: 32px;
+}
+
+
+div.links div.bigger a:hover{
+    text-decoration: underline;  
+   
+}
+
+
+div.ft_inner>img{
+    width: 2400px;
+    position: absolute;
+    left: -35%;
+    bottom: 0;
+    z-index: -100;
+}
+
+/* 배경 */
+div.container>ul.back{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    display: inline-block;
+   
+}
+
+ul.back li a{
+    position: absolute;
+    transition: all 0.2s;
+}
+
+ul.back li a img{
+   width: 170px;
+}
+
+ul.back li a:last-child{
+    opacity: 0;
+}
+
+ul.back li:hover a:first-child{
+    opacity:0;
+}
+ul.back li:hover a:last-child{
+    opacity:1;
+}
+
+ul.back li.bg1{
+    position: relative;
+    position: absolute;
+    top: 920px;
+    left: -150px;
+    z-index: 0;
+}
+
+ul.back li.bg2{
+    position: relative;
+    position: absolute;
+    top: 920px;
+    left: 1180px;
+    z-index: 0;
+}
+
+ul.back li.bg3{
+    position: relative;
+    position: absolute;
+    top: 1350px;
+    left: -150px;
+    z-index: 0;
+}
+
+ul.back li.bg4{
+    position: relative;
+    position: absolute;
+    top: 1510px;
+    left: 1180px;
+    z-index: 0;
+}
+
+ul.back li.bg5{
+    position: relative;
+    position: absolute;
+    top: 1900px;
+    left: -160px;
+    z-index: 0;
+}
+
+ul.back li.bg6{
+    position: relative;
+    position: absolute;
+    top: 2020px;
+    left: 1190px;
+    z-index: 0;
+}
+
+ul.back li.bg7{
+    position: relative;
+    position: absolute;
+    top: 2400px;
+    left:-90px;
+    z-index: 0;
+}
+
+ul.back li.bg8{
+    position: relative;
+    position: absolute;
+    top: 2500px;
+    left: 1180px;
+    z-index: 0;
+}
+
+ul.back li.bg9{
+    position: relative;
+    position: absolute;
+    top: 2810px;
+    left: -110px;
+    z-index: 0;
+}
+
+ul.back li.bg10{
+    position: relative;
+    position: absolute;
+    top: 2930px;
+    left: 1190px;
+    z-index: 0;
+}
+
+
+/*위로가기 버튼*/
+div.top {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    z-index: 200;
+}
+
+div.top a {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 20;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.top a img {
+    width: 50px;
+   position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 9px;
+}
+
+div.top a span{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(255,51,51,0.85);
+    z-index: 30;
+    color: #fff;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 13px ;
+    position: absolute;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+
+div.top a.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+div.top a span i{
+    font-size: 42px;
+    color: #fff;
+}
+
+div.top a:hover {
+    box-shadow: 0px 0px 3px 2px rgba(255, 51, 51, 0.5);
+}
+
+div.top a:hover span{
+    opacity: 1;
+}
+
+
+
+div.popup{
+    width: 1300px;
+    height: 400px;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -600px;
+    z-index: 10;
+    }
+
+div.popup img{
+    position: absolute;
+    
+}
+
+div.popup img.pop1{
+    right: 0px;
+   top: -620px;
+}
+
+div.popup img.pop3{
+    right: 255px;
+    top: -510px;
+}
+
+
+div.popup img.pop4{
+    right: 550px;
+    top: -560px;
+}
+
+div.popup img.pop2{
+    left: 0px;
+    top: -630px;
+}
+
+
+div.popup img.pop5{
+    left: 280px;
+    top: -560px;
+}
+
+div.ft_inner>img{
+    width: 2400px;
+    position: absolute;
+    left: -35%;
+    bottom: 0;
+    z-index: -10;
+}

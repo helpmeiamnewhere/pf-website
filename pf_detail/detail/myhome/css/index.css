@@ -1,0 +1,1764 @@
+@charset 'UTF-8';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Sulphur Point', sans-serif;
+
+ /*  background: rgb(176,255,240);
+  background: linear-gradient(0deg, rgb(183, 255, 242) 0%, rgb(160, 255, 239) 34%, rgb(181, 255, 224) 65%, rgba(254,255,151,1) 87%, rgb(255, 202, 169) 100%);
+  */
+  
+
+  background: rgb(255,209,180);
+background: linear-gradient(180deg, rgba(255,209,180,1) 0%, rgba(254,255,170,1) 17%, rgba(193,255,229,1) 42%, rgba(170,255,241,1) 71%, rgba(189,255,243,1) 90%, rgb(172, 227, 255) 100%);
+
+
+
+  overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+  /*   color: rgb(252, 255, 206); */
+   color: rgb(255, 249, 245);
+    font-size: 135%;
+    font-weight: 500;
+}
+
+/* 
+한글: 
+font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif;
+
+영문:
+
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Sulphur Point', sans-serif;
+
+
+*/
+
+
+/* 모바일 */
+
+
+@media all and (max-width: 499px) {
+
+div.container{
+  width: 100%;
+  height: 100%;
+  position: relative;   
+}
+
+div.intro{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+div.intro h1{
+display: inline-block;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+font-size: 8vw;
+font-weight: 600;
+line-height: 1.3;
+color: #333;
+z-index: 10;
+animation: text_fadeout 3s forwards;
+}
+
+@keyframes text_fadeout{
+0%{opacity: 1; color: #383838; }
+40%{opacity: 1; color: #383838; }
+85%{opacity: 1; color:#fff ; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);}
+100%{opacity: 0; color:rgb(255, 255, 255); text-shadow: 9px 9px 6px rgba(0,0,0,1);}
+}
+
+
+div.intro div.intro_bg{
+width: 100%;
+height: 100%;
+background-color: #fff;
+z-index: 0;
+animation: bg_fadeout 2.6s forwards; 
+}
+
+@keyframes bg_fadeout{
+0%{opacity: 1;}
+60%{opacity: 1;}
+100%{opacity: 0;}
+}
+
+div.home{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 46%;
+  font-size: 0;
+  overflow: hidden;
+ 
+}
+
+div.home > div.home_inner{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+div.home div.home_inner img.house{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+} 
+
+div.home div.home_inner img.lotus{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  animation: lotus 6s infinite;
+}
+
+@keyframes lotus{
+  30%{transform: translateX(-49.5%);}
+  60%{transform: translateX(-50.5%);}
+  100%{transform: translateX(-50%);}
+}
+
+div.home div.home_inner img.boat{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  animation: boat 6s infinite;
+}
+
+@keyframes boat{
+  30%{transform: translateX(-50.5%);}
+  60%{transform: translateX(-49.5%);}
+  100%{transform: translateX(-50%);}
+}
+
+div.home div.home_inner img.bub01{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  animation: bubble 0.5s infinite;
+}
+
+@keyframes bubble{
+  0%{transform: translate(-50%, 0.5%); opacity: 1;}
+  20%{transform: translate(-50%, 0%); opacity: 1;}
+  70%{transform: translate(-50%, -0.5%); opacity: 1;}
+  100%{transform: translate(-50%, 0%); opacity: 0;}
+}
+
+div.home div.home_inner img.bub02{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  animation: bubble 0.3s infinite;
+}
+
+div.home div.home_inner img.bub03{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  animation: bubble 0.5s infinite;
+  animation-delay: 0.2s;
+}
+
+div.water_drop{
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+div[class*='wave'] {
+  position: relative;
+  opacity: 0;
+  width: 2px;
+  height: 1px;
+  border-radius: 300px / 150px;
+  position: absolute;
+  z-index: -1;
+}
+
+
+div[class*='wave']:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: -5px;
+  left: -5px;
+  width: 2px;
+  height: 1px;
+  border: #FFF 5px solid;
+  border-radius: 300px / 150px;
+  animation: ripple-2 5s infinite;
+  z-index: -1;
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+  }
+}
+
+div.wave_00{
+  left: 30%;
+  top: 75%;
+  border: #FFF 5px solid;
+  animation-delay: 2s;
+  animation: ripple_00 5s infinite;
+}
+
+@keyframes ripple_00 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 76%;
+    opacity: 0;
+  }
+}
+
+div.wave_01{
+  left: 5%;
+  top: 52%;
+  border: #FFF 3px solid;
+  animation: ripple_01 5s infinite;
+  animation-delay: 1s;
+}
+
+
+@keyframes ripple_01 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 150px;
+    height: 70px;
+    border-width: 1px;
+    top: 53%;
+    opacity: 0;
+  }
+}
+
+div.wave_02{
+  left: 80%;
+  top: 26%;
+  border: #FFF 3px solid;
+  animation: ripple_02 4s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes ripple_02 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 150px;
+    height: 70px;
+    border-width: 1px;
+    top: 27%;
+    opacity: 0;
+  }
+}
+
+
+div.wave_03{
+  left: 27%;
+  top: 20%;
+  border: #FFF 3px solid;
+  animation: ripple_03 5s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes ripple_03 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 180px;
+    height: 90px;
+    border-width: 1px;
+    top: 21%;
+    opacity: 0;
+  }
+}
+
+div.wave_04{
+  left: 95%;
+  top: 63%;
+  border: #FFF 4px solid;
+  animation: ripple_04 4s infinite;
+  animation-delay: 2s;
+}
+
+
+@keyframes ripple_04 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 64%;
+    opacity: 0;
+  }
+}
+
+
+div.wave_05{
+  left: 75%;
+  top: 73%;
+  border: #FFF 4px solid;
+  animation: ripple_05 5s infinite;
+  animation-delay: 1s;
+}
+
+
+@keyframes ripple_05 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 74%;
+    opacity: 0;
+  }
+}
+
+
+div.wave_06{
+left: 54%;
+top: 87%;
+border: #FFF 5px solid;
+animation-delay: 2s;
+animation: ripple_06 5s infinite;
+}
+
+@keyframes ripple_06 {
+from {
+  opacity: 1;
+}
+to {
+  width: 200px;
+  height: 100px;
+  border-width: 1px;
+  top: 88%;
+  opacity: 0;
+}
+}
+
+
+div.container > div.logo{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+div.logo > a >img{
+  width: 70px;
+ /*  filter: hue-rotate(-120deg); */
+  animation: logo 6s infinite;
+}
+
+@keyframes logo{
+  0%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+  25%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+  45%{transform: rotateZ(120deg); filter: hue-rotate(240deg);}
+  65%{transform: rotateZ(-120deg); filter: hue-rotate(-240deg);}
+  85%{transform: rotateZ(240deg); filter: hue-rotate(-120deg);}
+  100%{transform: rotateZ(-360deg);}
+}
+
+
+div.container > div.pf{
+  position: absolute;
+  top: 230px;
+  left:30px;
+  
+}
+
+div.container > div.pf > a > span{
+font-size: 200%;
+}
+
+div.container > div.about{
+  position: absolute;
+  top: 180px;
+  left: 30px;
+
+}
+
+div.container > div.about > a > span{
+font-size: 200%;
+}
+
+
+div.container > div.dg{
+  position: absolute;
+  top: 280px;
+  left: 30px;
+ 
+}
+
+
+div.container > div.dg > a > span{
+font-size: 200%;
+}
+
+
+
+div.container > div.pf > a > span{
+  text-shadow: 1px 1px 8px rgba(112, 3, 3, 0.4);
+}
+div.container > div.about > a > span{
+  text-shadow: 1px 1px 8px rgba(3, 47, 112, 0.4);
+}
+div.container > div.dg > a > span{
+  text-shadow: 1px 1px 8px rgba(7, 124, 79, 0.5);
+}
+
+}
+
+
+
+
+
+
+
+
+/* ------------- 500px - 1269px ----------- */
+
+@media all and (min-width: 500px) and (max-width: 959px){
+
+
+ 
+  div.container{
+    width: 100%;
+    height: 100%;
+    position: relative;   
+}
+
+div.intro{
+  width: 100%;
+  height: 100%;
+}
+
+div.intro h1{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #333;
+  z-index: 10;
+  animation: text_fadeout 3s forwards;
+}
+
+@keyframes text_fadeout{
+  0%{opacity: 1; color: #383838; }
+  40%{opacity: 1; color: #383838; }
+  85%{opacity: 1; color:#fff ; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);}
+  100%{opacity: 0; color:rgb(255, 255, 255); text-shadow: 9px 9px 6px rgba(0,0,0,1);}
+}
+
+
+div.intro div.intro_bg{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 0;
+  animation: bg_fadeout 2.6s forwards; 
+}
+
+@keyframes bg_fadeout{
+  0%{opacity: 1;}
+  60%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+div.home{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+    font-size: 0;
+    overflow: hidden;
+   
+}
+
+div.home div.home_inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+ 
+}
+
+div.home div.home_inner img.house{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 0;
+} 
+
+div.home div.home_inner img.lotus{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    animation: lotus 6s infinite;
+}
+
+@keyframes lotus{
+    30%{transform: translateX(-49.5%);}
+    60%{transform: translateX(-50.5%);}
+    100%{transform: translateX(-50%);}
+}
+
+div.home div.home_inner img.boat{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: initial;
+    top: 0;
+    animation: boat 6s infinite;
+}
+
+@keyframes boat{
+    30%{transform: translateX(-50.5%);}
+    60%{transform: translateX(-49.5%);}
+    100%{transform: translateX(-50%);}
+}
+
+div.home div.home_inner img.bub01{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: initial;
+    top: 0;
+    animation: bubble 0.5s infinite;
+}
+
+@keyframes bubble{
+    0%{transform: translate(-50%, 0.5%); opacity: 1;}
+    20%{transform: translate(-50%, 0%); opacity: 1;}
+    70%{transform: translate(-50%, -0.5%); opacity: 1;}
+    100%{transform: translate(-50%, 0%); opacity: 0;}
+}
+
+div.home div.home_inner img.bub02{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: initial;
+    top: 0;
+    animation: bubble 0.3s infinite;
+}
+
+div.home div.home_inner img.bub03{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: initial;
+    top: 0;
+    animation: bubble 0.5s infinite;
+    animation-delay: 0.2s;
+}
+
+div.water_drop{
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+div[class*='wave'] {
+    position: relative;
+    opacity: 0;
+    width: 2px;
+    height: 1px;
+    border-radius: 300px / 150px;
+    position: absolute;
+    z-index: -1;
+}
+  
+
+  div[class*='wave']:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: -5px;
+    left: -5px;
+    width: 2px;
+    height: 1px;
+    border: #FFF 5px solid;
+    border-radius: 300px / 150px;
+    animation: ripple-2 5s infinite;
+    z-index: -1;
+ }
+  
+  @keyframes ripple-2 {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    100% {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+    }
+  }
+  
+  div.wave_00{
+    left: 30%;
+    top: 75%;
+    border: #FFF 5px solid;
+    animation-delay: 2s;
+    animation: ripple_00 5s infinite;
+ }
+ 
+@keyframes ripple_00 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 76%;
+      opacity: 0;
+    }
+}
+
+ div.wave_01{
+    left: 5%;
+    top: 52%;
+    border: #FFF 3px solid;
+    animation: ripple_01 5s infinite;
+    animation-delay: 1s;
+ }
+
+
+ @keyframes ripple_01 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 150px;
+      height: 70px;
+      border-width: 1px;
+      top: 53%;
+      opacity: 0;
+    }
+}
+
+div.wave_02{
+    left: 80%;
+    top: 26%;
+    border: #FFF 3px solid;
+    animation: ripple_02 4s infinite;
+    animation-delay: 3s;
+}
+
+@keyframes ripple_02 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 150px;
+      height: 70px;
+      border-width: 1px;
+      top: 27%;
+      opacity: 0;
+    }
+}
+
+
+div.wave_03{
+    left: 27%;
+    top: 20%;
+    border: #FFF 3px solid;
+    animation: ripple_03 5s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes ripple_03 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 180px;
+      height: 90px;
+      border-width: 1px;
+      top: 21%;
+      opacity: 0;
+    }
+}
+
+div.wave_04{
+    left: 95%;
+    top: 63%;
+    border: #FFF 4px solid;
+    animation: ripple_04 4s infinite;
+    animation-delay: 2s;
+}
+
+
+@keyframes ripple_04 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 64%;
+      opacity: 0;
+    }
+}
+
+
+div.wave_05{
+    left: 75%;
+    top: 73%;
+    border: #FFF 4px solid;
+    animation: ripple_05 5s infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes ripple_05 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 74%;
+      opacity: 0;
+    }
+}
+
+ 
+div.wave_06{
+  left: 54%;
+  top: 87%;
+  border: #FFF 5px solid;
+  animation-delay: 2s;
+  animation: ripple_06 5s infinite;
+}
+
+@keyframes ripple_06 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 88%;
+    opacity: 0;
+  }
+}
+
+
+div.container > div.logo{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+div.logo > a >img{
+    width: 85px;
+   /*  filter: hue-rotate(-120deg); */
+    animation: logo 6s infinite;
+}
+
+@keyframes logo{
+    0%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+    25%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+    45%{transform: rotateZ(120deg); filter: hue-rotate(240deg);}
+    65%{transform: rotateZ(-120deg); filter: hue-rotate(-240deg);}
+    85%{transform: rotateZ(240deg); filter: hue-rotate(-120deg);}
+    100%{transform: rotateZ(-360deg);}
+}
+
+
+div.container > div.pf{
+    position: absolute;
+    top: 20px;
+    right:30px;
+    font-size: 400%;
+}
+
+
+div.container > div.about{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 400%;
+}
+
+
+div.container > div.dg{
+    position: absolute;
+    bottom: 110px;
+    right: 30px;
+    font-size: 400%;
+}
+
+div.container > div.pf > a > span{
+    text-shadow: 1px 1px 3px rgba(112, 3, 3, 0.7);
+}
+div.container > div.about > a > span{
+    text-shadow: 1px 1px 3px rgba(3, 47, 112, 0.7);
+}
+div.container > div.dg > a > span{
+    text-shadow: 1px 1px 3px rgba(7, 124, 79, 0.7);
+}
+
+div.bubble{
+  position: fixed;
+  top: 80vh;
+  left: 25%;
+  width: 3vw;
+  height: 3vh;
+/*  border: 1px solid black; */
+}
+
+  
+
+
+
+}
+
+
+@media all and (min-width: 960px) and (max-width: 1269px){
+ 
+
+  div.container{
+    width: 100%;
+    height: 100%;
+    position: relative;   
+}
+
+div.intro{
+  width: 100%;
+  height: 100%;
+}
+
+div.intro h1{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #333;
+  z-index: 10;
+  animation: text_fadeout 3s forwards;
+}
+
+@keyframes text_fadeout{
+  0%{opacity: 1; color: #383838; }
+  40%{opacity: 1; color: #383838; }
+  85%{opacity: 1; color:#fff ; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);}
+  100%{opacity: 0; color:rgb(255, 255, 255); text-shadow: 9px 9px 6px rgba(0,0,0,1);}
+}
+
+
+div.intro div.intro_bg{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 0;
+  animation: bg_fadeout 2.6s forwards; 
+}
+
+@keyframes bg_fadeout{
+  0%{opacity: 1;}
+  60%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+div.home{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 0;
+    overflow: hidden;
+    
+}
+
+div.home div.home_inner{
+  width: 100%;
+  height: auto;
+}
+
+div.home div.home_inner img.house{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+} 
+
+div.home div.home_inner img.lotus{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    animation: lotus 6s infinite;
+}
+
+@keyframes lotus{
+    30%{transform: translateX(-49.5%);}
+    60%{transform: translateX(-50.5%);}
+    100%{transform: translateX(-50%);}
+}
+
+div.home div.home_inner img.boat{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: boat 6s infinite;
+}
+
+@keyframes boat{
+    30%{transform: translate(-50.5%, -50%);}
+    60%{transform: translate(-49.5%, -50.2%);}
+    100%{transform: translate(-50%, -50%);}
+}
+
+div.home div.home_inner img.bub01{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: bubble 0.5s infinite;
+}
+
+@keyframes bubble{
+    0%{transform: translate(-50%, -49.5%); opacity: 1;}
+    20%{transform: translate(-50%, -50%); opacity: 1;}
+    70%{transform: translate(-50%, -50.5%); opacity: 1;}
+    100%{transform: translate(-50%, -50%); opacity: 0;}
+}
+
+div.home div.home_inner img.bub02{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: bubble 0.3s infinite;
+}
+
+div.home div.home_inner img.bub03{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: bubble 0.5s infinite;
+    animation-delay: 0.2s;
+}
+
+div.water_drop{
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+div[class*='wave'] {
+    position: relative;
+    opacity: 0;
+    width: 2px;
+    height: 1px;
+    border-radius: 300px / 150px;
+    position: absolute;
+    z-index: -1;
+}
+  
+
+  div[class*='wave']:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: -5px;
+    left: -5px;
+    width: 2px;
+    height: 1px;
+    border: #FFF 5px solid;
+    border-radius: 300px / 150px;
+    animation: ripple-2 5s infinite;
+    z-index: -1;
+ }
+  
+  @keyframes ripple-2 {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    100% {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+    }
+  }
+  
+  div.wave_00{
+    left: 30%;
+    top: 75%;
+    border: #FFF 5px solid;
+    animation-delay: 2s;
+    animation: ripple_00 5s infinite;
+ }
+ 
+@keyframes ripple_00 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 76%;
+      opacity: 0;
+    }
+}
+
+ div.wave_01{
+    left: 5%;
+    top: 52%;
+    border: #FFF 3px solid;
+    animation: ripple_01 5s infinite;
+    animation-delay: 1s;
+ }
+
+
+ @keyframes ripple_01 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 150px;
+      height: 70px;
+      border-width: 1px;
+      top: 53%;
+      opacity: 0;
+    }
+}
+
+div.wave_02{
+    left: 80%;
+    top: 26%;
+    border: #FFF 3px solid;
+    animation: ripple_02 4s infinite;
+    animation-delay: 3s;
+}
+
+@keyframes ripple_02 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 150px;
+      height: 70px;
+      border-width: 1px;
+      top: 27%;
+      opacity: 0;
+    }
+}
+
+
+div.wave_03{
+    left: 27%;
+    top: 20%;
+    border: #FFF 3px solid;
+    animation: ripple_03 5s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes ripple_03 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 180px;
+      height: 90px;
+      border-width: 1px;
+      top: 21%;
+      opacity: 0;
+    }
+}
+
+div.wave_04{
+    left: 95%;
+    top: 63%;
+    border: #FFF 4px solid;
+    animation: ripple_04 4s infinite;
+    animation-delay: 2s;
+}
+
+
+@keyframes ripple_04 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 64%;
+      opacity: 0;
+    }
+}
+
+
+div.wave_05{
+    left: 75%;
+    top: 73%;
+    border: #FFF 4px solid;
+    animation: ripple_05 5s infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes ripple_05 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 74%;
+      opacity: 0;
+    }
+}
+
+ 
+div.wave_06{
+  left: 54%;
+  top: 87%;
+  border: #FFF 5px solid;
+  animation-delay: 2s;
+  animation: ripple_06 5s infinite;
+}
+
+@keyframes ripple_06 {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 88%;
+    opacity: 0;
+  }
+}
+
+
+div.container > div.logo{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+div.logo > a >img{
+    width: 85px;
+   /*  filter: hue-rotate(-120deg); */
+    animation: logo 6s infinite;
+}
+
+@keyframes logo{
+    0%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+    25%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+    45%{transform: rotateZ(120deg); filter: hue-rotate(240deg);}
+    65%{transform: rotateZ(-120deg); filter: hue-rotate(-240deg);}
+    85%{transform: rotateZ(240deg); filter: hue-rotate(-120deg);}
+    100%{transform: rotateZ(-360deg);}
+}
+
+
+div.container > div.pf{
+    position: absolute;
+    top: 20px;
+    right:30px;
+    font-size: 400%;
+}
+
+
+div.container > div.about{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 400%;
+}
+
+
+div.container > div.dg{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 400%;
+}
+
+div.container > div.pf > a > span{
+    text-shadow: 1px 1px 3px rgba(112, 3, 3, 0.7);
+}
+div.container > div.about > a > span{
+    text-shadow: 1px 1px 3px rgba(3, 47, 112, 0.7);
+}
+div.container > div.dg > a > span{
+    text-shadow: 1px 1px 3px rgba(7, 124, 79, 0.7);
+}
+
+div.bubble{
+  position: fixed;
+  top: 80vh;
+  left: 25%;
+  width: 3vw;
+  height: 3vh;
+/*  border: 1px solid black; */
+}
+
+
+
+
+} 
+
+
+/* ------------- 1270px ----------- */
+
+@media all and (min-width: 1270px) {
+
+  div.container{
+      width: 100%;
+      height: 100%;
+      position: relative;   
+  }
+  
+  div.intro{
+    width: 100%;
+    height: 100%;
+  }
+  
+  div.intro h1{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #333;
+    z-index: 10;
+    animation: text_fadeout 3s forwards;
+  }
+  
+  @keyframes text_fadeout{
+    0%{opacity: 1; color: #383838; }
+    40%{opacity: 1; color: #383838; }
+    85%{opacity: 1; color:#fff ; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);}
+    100%{opacity: 0; color:rgb(255, 255, 255); text-shadow: 9px 9px 6px rgba(0,0,0,1);}
+  }
+  
+  
+  div.intro div.intro_bg{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+    animation: bg_fadeout 2.6s forwards; 
+  }
+  
+  @keyframes bg_fadeout{
+    0%{opacity: 1;}
+    60%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  
+  div.home{
+      height: 100%;
+      width: 100%;
+      position: relative;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      font-size: 0;
+      overflow: hidden;
+      
+  }
+  
+  div.home div.home_inner{
+    width: 100%;
+    height: auto;
+  }
+  
+  div.home div.home_inner img.house{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); 
+  } 
+  
+  div.home div.home_inner img.lotus{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); 
+      animation: lotus 6s infinite;
+  }
+  
+  @keyframes lotus{
+      30%{transform: translateX(-49.5%);}
+      60%{transform: translateX(-50.5%);}
+      100%{transform: translateX(-50%);}
+  }
+  
+  div.home div.home_inner img.boat{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: boat 6s infinite;
+  }
+  
+  @keyframes boat{
+      30%{transform: translate(-50.5%, -50%);}
+      60%{transform: translate(-49.5%, -50.2%);}
+      100%{transform: translate(-50%, -50%);}
+  }
+  
+  div.home div.home_inner img.bub01{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: bubble 0.5s infinite;
+  }
+  
+  @keyframes bubble{
+      0%{transform: translate(-50%, -49.5%); opacity: 1;}
+      20%{transform: translate(-50%, -50%); opacity: 1;}
+      70%{transform: translate(-50%, -50.5%); opacity: 1;}
+      100%{transform: translate(-50%, -50%); opacity: 0;}
+  }
+  
+  div.home div.home_inner img.bub02{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: bubble 0.3s infinite;
+  }
+  
+  div.home div.home_inner img.bub03{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: bubble 0.5s infinite;
+      animation-delay: 0.2s;
+  }
+  
+  div.water_drop{
+      height: inherit;
+      width: inherit;
+      position: absolute;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      
+  }
+  
+  div[class*='wave'] {
+      position: relative;
+      opacity: 0;
+      width: 2px;
+      height: 1px;
+      border-radius: 300px / 150px;
+      position: absolute;
+      z-index: -1;
+  }
+    
+  
+    div[class*='wave']:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      top: -5px;
+      left: -5px;
+      width: 2px;
+      height: 1px;
+      border: #FFF 5px solid;
+      border-radius: 300px / 150px;
+      animation: ripple-2 5s infinite;
+      z-index: -1;
+   }
+    
+    @keyframes ripple-2 {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      100% {
+        width: 200px;
+        height: 100px;
+        border-width: 1px;
+      }
+    }
+    
+    div.wave_00{
+      left: 30%;
+      top: 75%;
+      border: #FFF 5px solid;
+      animation-delay: 2s;
+      animation: ripple_00 5s infinite;
+   }
+   
+  @keyframes ripple_00 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 200px;
+        height: 100px;
+        border-width: 1px;
+        top: 76%;
+        opacity: 0;
+      }
+  }
+  
+   div.wave_01{
+      left: 5%;
+      top: 52%;
+      border: #FFF 3px solid;
+      animation: ripple_01 5s infinite;
+      animation-delay: 1s;
+   }
+  
+  
+   @keyframes ripple_01 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 150px;
+        height: 70px;
+        border-width: 1px;
+        top: 53%;
+        opacity: 0;
+      }
+  }
+  
+  div.wave_02{
+      left: 80%;
+      top: 26%;
+      border: #FFF 3px solid;
+      animation: ripple_02 4s infinite;
+      animation-delay: 3s;
+  }
+  
+  @keyframes ripple_02 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 150px;
+        height: 70px;
+        border-width: 1px;
+        top: 27%;
+        opacity: 0;
+      }
+  }
+  
+  
+  div.wave_03{
+      left: 27%;
+      top: 20%;
+      border: #FFF 3px solid;
+      animation: ripple_03 5s infinite;
+      animation-delay: 2s;
+  }
+  
+  @keyframes ripple_03 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 180px;
+        height: 90px;
+        border-width: 1px;
+        top: 21%;
+        opacity: 0;
+      }
+  }
+  
+  div.wave_04{
+      left: 95%;
+      top: 63%;
+      border: #FFF 4px solid;
+      animation: ripple_04 4s infinite;
+      animation-delay: 2s;
+  }
+  
+  
+  @keyframes ripple_04 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 200px;
+        height: 100px;
+        border-width: 1px;
+        top: 64%;
+        opacity: 0;
+      }
+  }
+  
+  
+  div.wave_05{
+      left: 75%;
+      top: 73%;
+      border: #FFF 4px solid;
+      animation: ripple_05 5s infinite;
+      animation-delay: 1s;
+  }
+  
+  
+  @keyframes ripple_05 {
+      from {
+        opacity: 1;
+      }
+      to {
+        width: 200px;
+        height: 100px;
+        border-width: 1px;
+        top: 74%;
+        opacity: 0;
+      }
+  }
+  
+   
+  div.wave_06{
+    left: 54%;
+    top: 87%;
+    border: #FFF 5px solid;
+    animation-delay: 2s;
+    animation: ripple_06 5s infinite;
+  }
+  
+  @keyframes ripple_06 {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 88%;
+      opacity: 0;
+    }
+  }
+  
+  
+  div.container > div.logo{
+      position: absolute;
+      top: 20px;
+      left: 30px;
+  }
+  
+  div.logo > a >img{
+      width: 85px;
+     /*  filter: hue-rotate(-120deg); */
+      animation: logo 6s infinite;
+  }
+  
+  @keyframes logo{
+      0%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+      25%{transform: rotateZ(0deg); filter: hue-rotate(0deg);}
+      45%{transform: rotateZ(120deg); filter: hue-rotate(240deg);}
+      65%{transform: rotateZ(-120deg); filter: hue-rotate(-240deg);}
+      85%{transform: rotateZ(240deg); filter: hue-rotate(-120deg);}
+      100%{transform: rotateZ(-360deg);}
+  }
+  
+  
+  div.container > div.pf{
+      position: absolute;
+      top: 20px;
+      right:30px;
+      font-size: 400%;
+  }
+  
+  
+  div.container > div.about{
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      font-size: 400%;
+  }
+  
+  
+  div.container > div.dg{
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 400%;
+  }
+  
+  div.container > div.pf > a > span{
+      text-shadow: 1px 1px 3px rgba(112, 3, 3, 0.7);
+  }
+  div.container > div.about > a > span{
+      text-shadow: 1px 1px 3px rgba(3, 47, 112, 0.7);
+  }
+  div.container > div.dg > a > span{
+      text-shadow: 1px 1px 3px rgba(7, 124, 79, 0.7);
+  }
+  
+  div.bubble{
+    position: fixed;
+    top: 80vh;
+    left: 25%;
+    width: 3vw;
+    height: 3vh;
+  /*  border: 1px solid black; */
+  }
+  
+  }
+  

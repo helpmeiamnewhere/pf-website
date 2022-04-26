@@ -1,0 +1,78 @@
+$('.menu01>a').mouseover(function(){
+    $('.menu01').children('.pack_01').stop().slideDown()
+})
+$('.menu01').mouseleave(function(){
+    $('.menu01').children('.pack_01').stop().slideUp('fast')
+})
+$('.menu02>a').mouseover(function(){
+    $('.menu02').children('.pack_02').stop().slideDown()
+})
+$('.menu02').mouseleave(function(){
+    $('.menu02').children('.pack_02').stop().slideUp('fast')
+})
+$('.menu03>a').mouseover(function(){
+    $('.menu03').children('.pack_03').stop().slideDown()
+})
+$('.menu03').mouseleave(function(){
+    $('.menu03').children('.pack_03').stop().slideUp('fast')
+})
+$('.menu04>a').mouseover(function(){
+    $('.menu04').children('.pack_04').stop().slideDown()
+})
+$('.menu04').mouseleave(function(){
+    $('.menu04').children('.pack_04').stop().slideUp('fast')
+})
+$('.menu05>a').mouseover(function(){
+    $('.menu05').children('.pack_05').stop().slideDown()
+})
+$('.menu05').mouseleave(function(){
+    $('.menu05').children('.pack_05').stop().slideUp('fast')
+})
+$('.menu06>a').mouseover(function(){
+    $('.menu06').children('.pack_06').stop().slideDown()
+})
+$('.menu06').mouseleave(function(){
+    $('.menu06').children('.pack_06').stop().slideUp('fast')
+})
+$('#go2_btn').click(function(){
+    $('.go2_depth1').fadeIn()
+})
+$('.go2_depth1>.close').click(function(){
+    $('.go2_depth1').fadeOut()
+})
+$('#go3_btn').click(function(){
+    $('.go3_depth1').fadeIn()
+})
+$('.go3_depth1>.close').click(function(){
+    $('.go3_depth1').fadeOut()
+})
+$('#notice').click(function(){
+    $('.news_01').show()
+    $('.pic_01, .news_02, .pic_02, .gallery').hide()
+    $('#notice').addClass('active')
+    $(this).siblings().removeClass('active')
+})
+$('#patriot').click(function(){
+    $('.pic_01').show()
+    $('.news_01, .news_02, .pic_02, .gallery').hide()
+    $('#patriot').addClass('active')
+    $(this).siblings().removeClass('active')
+})
+$('#hire').click(function(){
+    $('.news_02').show()
+    $('.news_01, .pic_01, .pic_02, .gallery').hide()
+    $('#hire').addClass('active')
+    $(this).siblings().removeClass('active')
+})
+$('#event').click(function(){
+    $('.pic_02').show()
+    $('.news_01, .pic_01, .news_02, .gallery').hide()
+    $('#event').addClass('active')
+    $(this).siblings().removeClass('active')
+})
+$('#gallery').click(function(){
+    $('.gallery').show()
+    $('.news_01, .pic_01, .news_02, .pic_02').hide()
+    $('#gallery').addClass('active')
+    $(this).siblings().removeClass('active')
+})

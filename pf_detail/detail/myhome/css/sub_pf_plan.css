@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+div.container{
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+}
+div.wrap{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    box-sizing: border-box;
+}
+
+div.wrap>div.content{
+    width: inherit;
+    height: calc(100vh - 60px);
+}
+div.wrap>div.content>div.section{
+    width: inherit;
+    height: inherit;
+    border: 1px solid green;
+    background-color: khaki;
+}
+
+div.swiper-container{
+    width: 100%;
+   
+}
+
+div.swiper-wrapper{
+    width: 100vh;
+}
+
+div.swiper-slide{
+    height: 100%;
+    width: 100vw;
+   
+}
+
+div.swiper-slide>img{
+    height: inherit;
+    width: 100vw;
+}
+
+div.two, div.three{
+    width: inherit;
+    height: inherit;
+    border: 1px solid tomato;
+    overflow-y: scroll;
+    display: none;
+}
+
+/* 버튼 */
+
+div.wrap>div.title{
+    /*   position: absolute; */
+    width: inherit;
+    height: 60px;
+    box-sizing: border-box;
+   
+}
+
+div.wrap div.title a span{
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+div.wrap div.title a{
+    display: inline-block;
+    background-color: seagreen;
+    width: 200px;
+    height: 60px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    line-height: 57px;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
